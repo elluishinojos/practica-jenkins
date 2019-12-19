@@ -17,4 +17,5 @@ pipeline {
 					PowerShell("echo Saludos desde '$PWD'")
 				}
 			}
+		}
 }
