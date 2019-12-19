@@ -1,18 +1,14 @@
 node {
 	stage("Condicional y Ciclo") {
-		steps {
-			for (i=0; i<2; i++) {
-				if (i==0) {
-					echo 'Hola 0'
-				} else {
-					echo 'Hola 1'
-				}
+		for (i=0; i<2; i++) {
+			if (i==0) {
+				echo 'Hola 0'
+			} else {
+				echo 'Hola 1'
 			}
 		}
 	}
-	stage("Saludos desde la terminal") {
-		steps {
-			PowerShell("echo Saludos desde '$PWD'")
-		}
+stage("Saludos desde la terminal") {
+		PowerShell("echo Saludos desde '$PWD'")
 	}
 }
