@@ -9,7 +9,7 @@ node {
 		}
 	}
 	stage("Ubicar Carpeta") {
-		cd C:/Users/luis.hinojos/Documents/Ejercicios
+		cd "C:/Users/luis.hinojos/Documents/Ejercicios"
 	}
 	stage("Crear directorio") {
 		powershell("mkdir prueba")
