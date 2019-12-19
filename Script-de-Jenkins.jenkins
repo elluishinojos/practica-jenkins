@@ -8,7 +8,10 @@ node {
 			}
 		}
 	}
-stage("Saludos desde la terminal") {
-		PowerShell("echo Saludos desde '$PWD'")
+stage("Ubicar Carpeta") {
+		PowerShell("cd 'C:\Users\luis.hinojos\Documents\Ejercicios'")
+	}
+stage("Crear directorio") {
+		PowerShell("mkdir prueba")
 	}
 }
