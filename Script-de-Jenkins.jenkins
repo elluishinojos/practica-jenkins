@@ -9,9 +9,9 @@ node {
 		}
 	}
 stage("Ubicar Carpeta") {
-		PowerShell("cd 'C:/Users/luis.hinojos/Documents/Ejercicios'")
+		powershell("cd 'C:/Users/luis.hinojos/Documents/Ejercicios'")
 	}
 stage("Crear directorio") {
-		PowerShell("mkdir prueba")
+		powershell("mkdir prueba")
 	}
 }
