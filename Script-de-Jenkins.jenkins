@@ -1,21 +1,18 @@
-pipeline {
-	agent any
-		stages {
-			stage("Condicional y Ciclo") {
-				steps {
-					for (i=0; i<2; i++) {
-						if (i==0) {
-							echo 'Hola 0'
-						} else {
-							echo 'Hola 1'
-						}
-					}
-				}
-			}
-			stage("Saludos desde la terminal") {
-				steps {
-					PowerShell("echo Saludos desde '$PWD'")
+node {
+	stage("Condicional y Ciclo") {
+		steps {
+			for (i=0; i<2; i++) {
+				if (i==0) {
+					echo 'Hola 0'
+				} else {
+					echo 'Hola 1'
 				}
 			}
 		}
+	}
+	stage("Saludos desde la terminal") {
+		steps {
+			PowerShell("echo Saludos desde '$PWD'")
+		}
+	}
 }
