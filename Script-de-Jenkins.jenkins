@@ -9,7 +9,7 @@ node {
 		}
 	}
 	stage("Crear respaldo") {
-		powershell("\$fecha=\$(Get-Date -UFormat "%d\-%m\-%Y")")
-		powershell("Compress-Archive 'prueba' '$HORA.zip'")
+		powershell("\$fecha=\$(Get-Date -UFormat "%d-%m-%Y")")
+		powershell("Compress-Archive 'prueba' '$fecha.zip'")
 	}
 }
